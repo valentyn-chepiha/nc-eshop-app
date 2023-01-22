@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  startdb:
+    image: 'valentynchepiha/oracle18xe:18.4.0-xe'
+    container_name: startdb
+    restart: always
+    environment:
+      - ORACLE_PWD=Fg6dg6es78etf8g
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - '.././container/oracle18xe:/opt/oracle/oradata'
+
